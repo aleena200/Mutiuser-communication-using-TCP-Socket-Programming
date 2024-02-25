@@ -20,3 +20,9 @@ write(sock,client_name,strlen(client_name))  to send the msg to server
 In the same program a single client is able to send msg to sever using write and receive msg from server using recv because of multithreading.
 client use pthread_create to create a thread that receive msg from server. and the main client will write /send msg to server.
 
+AF_INET is the Internet address family for IPv4. SOCK_STREAM is the socket type for TCP,
+
+=>struct socaddr is a general structure for all protocol but struct sockaddr_in is a structure specific for ipv4 address family.
+=>Port 80 is the default port. It's what gets used when no port is specified. 8080 is Tomcat's default port so as not to interfere with any other web server that may be running.
+=>htons:convert host byte order to network  byte order.
+=>inet_addr converts an IPv4 address from a string in dotted decimal representation to an integer. 
